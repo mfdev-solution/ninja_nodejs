@@ -1,0 +1,25 @@
+{
+  "name": "ninja_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfdev-solution/ninja_nodejs.git"
+  },
+  "author": "Mouhamed fall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mfdev-solution/ninja_nodejs/issues"
+  },
+  "homepage": "https://github.com/mfdev-solution/ninja_nodejs#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
