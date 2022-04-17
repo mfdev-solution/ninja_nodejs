@@ -4,3 +4,4 @@
 // console.log(global);
 const os = require('os');
 console.log(os.platform(), os.homedir());
+console.log("hello");
