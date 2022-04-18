@@ -9,8 +9,18 @@ const app = express();
 //setting views 
 app.set('view engine', 'ejs')
 
-
+// static files 
+app.use(express.static('public'))
 app.listen(3000);
+
+//an example of midlware
+app.use((req, res,next)=>{
+    console.log("new request made : ");
+    console.log('host',req.hostname);
+    console.log('paht',req.path);
+    console.log('method',req.method);
+    next();
+})
 
 app.get('/', (req, res) => {
     const blogs = [
