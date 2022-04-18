@@ -6,6 +6,9 @@ const express = require('express');
 const app = express();
 
 //listen for requests
+//setting views 
+app.set('views engine', 'ejs')
+
 
 app.listen(3000);
 
