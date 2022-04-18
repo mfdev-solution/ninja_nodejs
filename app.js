@@ -12,11 +12,15 @@ app.set('view engine', 'ejs')
 
 app.listen(3000);
 
-app.get('/', (req,res) => {
-    // res.send("<p>home page </p>");
-    res.render('index',{title:"home"});
-    // res.sendFile('./views/index.html',{root:__dirname})
-})
+app.get('/', (req, res) => {
+    const blogs = [
+      {title: 'Yoshi finds eggs', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+      {title: 'Mario finds stars', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+      {title: 'How to defeat bowser', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+    ];
+    res.render('index', { title: 'Home', blogs });
+  }
+);
 
 
 app.get('/about', (req,res) => { 
