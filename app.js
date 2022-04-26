@@ -29,7 +29,7 @@ app.get('/add-blog' ,(req, res)=>{
     })
     blog.save()
 });
-app.get('/all-blogs',(req,res)=>{
+app.get('/blogs',(req,res)=>{
     Blog.find()
         .then((resutl)=>{
             res.render('blogs',{title:'Blogs',blogs:resutl})
@@ -84,7 +84,7 @@ app.delete('/blogs/:id', (req , res ) =>{
     const id = req.params.id;
     Blog.findByIdAndDelete(id)
     .then((result)=>{
-        
+        res.json({redirect:'/blogs'})
     })
 } )
 app.use((req,res) =>{
