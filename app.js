@@ -69,7 +69,7 @@ app.get('/single-blog',(req,res)=>{
         const blogs = new Blog(req.body);
         blogs.save()
         .then((result) =>{
-            res.redirect('/all-blogs');
+            res.redirect('/blogs');
         })
         
     })
@@ -83,8 +83,8 @@ app.get('/single-blog',(req,res)=>{
 app.delete('/blogs/:id', (req , res ) =>{
     const id = req.params.id;
     Blog.findByIdAndDelete(id)
-    .then((result)=>{
-        res.json({redirect:'/blogs'})
+    .then(result=>{
+        res.json({redirect:'/blogs'});
     })
 } )
 app.use((req,res) =>{
